@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LedControl | Área de clientes | SIMELED</title>
+  <meta name="description" content="Área de clientes SIMELED: acceso a LedControl, instalación y documentación para actualización de carteles LED." />
+
+  <style>
+    :root{
+      --bg:#0b1220; --bg2:#070c16;
+      --card:#131f3d; --border:rgba(255,255,255,.08);
+      --text:#eaf0ff; --muted:#a9b4d0;
+      --accent:#25d366;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:980px;margin:auto;padding:42px 18px}
+    .top{
+      display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .btn{
+      padding:12px 18px;border-radius:999px;font-weight:800;display:inline-block;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+    }
+    .btnPrimary{
+      background:var(--accent); color:#06110a; border-color:rgba(0,0,0,.12);
+    }
+    h1{margin:12px 0 8px;font-size:clamp(26px,4.6vw,40px)}
+    p{margin:0;color:var(--muted);line-height:1.65}
+    .card{
+      margin-top:16px;
+      background:linear-gradient(180deg,var(--card),#0f1935);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px;
+    }
+    .note{
+      padding:14px 14px;border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+      margin-top:12px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .k{color:rgba(255,255,255,.92);font-weight:900}
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div style="opacity:.9;font-weight:900">SIMELED</div>
+        <div style="opacity:.8">S.I.M.E. Electrónica S.A.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="./index.html">← Volver al sitio</a>
+        <a class="btn" href="mailto:info@simeled.com">Email</a>
+      </div>
+    </div>
+
+    <h1>LedControl — Área de clientes</h1>
+    <p>
+      Esta sección es para clientes que utilizan cartelería SIMELED.
+      Desde acá podés acceder a instalación, documentación y enlaces oficiales.
+    </p>
+
+    <div class="card">
+      <h2 style="margin:0 0 10px">Descarga / instalación</h2>
+      <p>
+        Link oficial que ya enviás a tus clientes:
+      </p>
+
+      <div class="note">
+        <span class="k">Instalación:</span>
+        <a href="https://www.simeled.com/ledcontrol/help/Instalacion.html" target="_blank" rel="noopener">
+          https://www.simeled.com/ledcontrol/help/Instalacion.html
+        </a>
+      </div>
+
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btnPrimary" href="https://www.simeled.com/ledcontrol/help/Instalacion.html" target="_blank" rel="noopener">Abrir Instalación</a>
+        <a class="btn" href="https://simeled.com/ledcontrol-main/" target="_blank" rel="noopener">Abrir LedControl Main</a>
+      </div>
+
+      <div class="grid">
+        <div class="note">
+          <span class="k">Tip PRO:</span> Acá también podemos poner “Notas de versión” y “Última actualización”.
+        </div>
+        <div class="note">
+          <span class="k">Soporte:</span> Si algo no abre, mandanos captura y versión de Windows.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="margin:0 0 10px">Contacto de soporte</h2>
+      <p>Si necesitás asistencia técnica:</p>
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btnPrimary" href="https://wa.me/541161776651" target="_blank" rel="noopener">WhatsApp soporte</a>
+        <a class="btn" href="mailto:info@simeled.com">info@simeled.com</a>
+      </div>
+    </div>
+
+    <div style="margin-top:18px;color:var(--muted);font-size:13px">
+      © SIMELED · Área de clientes (demo)
+    </div>
+  </div>
+
+</body>
+</html>
