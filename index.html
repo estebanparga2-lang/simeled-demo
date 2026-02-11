@@ -1,282 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LedControl | Área de clientes | SIMELED</title>
+  <meta name="description" content="Área de clientes SIMELED: acceso a LedControl, instalación y documentación para actualización de carteles LED." />
 
-<title>Carteles LED para colectivos y buses | SIMELED</title>
-
-<meta name="description" content="SIMELED desarrolla carteles LED para colectivos y buses desde 1999. Ramaleros, carteles superiores y cartelería LED multicolor con software propio y soporte técnico especializado.">
-
-<style>
-
-:root{
---bg:#0b1220;
---bg-soft:#10192e;
---card:#162242;
---accent:#25d366;
---accent-soft:#1fb955;
---text:#eaf0ff;
---muted:#9fb3d1;
-}
-
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
-background:linear-gradient(180deg,#0b1220,#070c16);
-color:var(--text);
-}
-
-a{text-decoration:none;color:inherit}
-
-header{
-background:linear-gradient(135deg,#3b5bfd,#e94b7c);
-padding:90px 20px;
-text-align:center;
-}
-
-header h1{
-margin:0;
-font-size:clamp(30px,5vw,52px);
-font-weight:800;
-}
-
-header p{
-margin-top:18px;
-font-size:20px;
-opacity:.95;
-max-width:800px;
-margin-left:auto;
-margin-right:auto;
-}
-
-.btn{
-display:inline-block;
-padding:16px 28px;
-border-radius:40px;
-font-weight:700;
-margin:10px;
-}
-
-.btn-primary{
-background:var(--accent);
-color:#000;
-}
-
-.btn-secondary{
-background:rgba(255,255,255,.15);
-border:1px solid rgba(255,255,255,.25);
-}
-
-main{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
-}
-
-section{
-margin-bottom:100px;
-}
-
-h2{
-font-size:38px;
-margin-bottom:20px;
-}
-
-p{
-color:var(--muted);
-font-size:17px;
-line-height:1.7;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.card{
-background:linear-gradient(180deg,var(--card),#0f1935);
-padding:30px;
-border-radius:24px;
-border:1px solid rgba(255,255,255,.06);
-}
-
-.card h3{
-margin-top:0;
-}
-
-ul{
-padding-left:20px;
-color:var(--muted);
-}
-
-.cta{
-background:linear-gradient(135deg,#162242,#0b1220);
-padding:60px 30px;
-border-radius:30px;
-text-align:center;
-border:1px solid rgba(255,255,255,.08);
-}
-
-footer{
-text-align:center;
-padding:40px 20px;
-color:var(--muted);
-font-size:14px;
-}
-
-.small{
-font-size:14px;
-opacity:.8;
-}
-
-</style>
+  <style>
+    :root{
+      --bg:#0b1220; --bg2:#070c16;
+      --card:#131f3d; --border:rgba(255,255,255,.08);
+      --text:#eaf0ff; --muted:#a9b4d0;
+      --accent:#25d366;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:linear-gradient(180deg,var(--bg),var(--bg2));
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:980px;margin:auto;padding:42px 18px}
+    .top{
+      display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+    .btn{
+      padding:12px 18px;border-radius:999px;font-weight:800;display:inline-block;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.06);
+    }
+    .btnPrimary{
+      background:var(--accent); color:#06110a; border-color:rgba(0,0,0,.12);
+    }
+    h1{margin:12px 0 8px;font-size:clamp(26px,4.6vw,40px)}
+    p{margin:0;color:var(--muted);line-height:1.65}
+    .card{
+      margin-top:16px;
+      background:linear-gradient(180deg,var(--card),#0f1935);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:22px;
+    }
+    .note{
+      padding:14px 14px;border-radius:16px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+      margin-top:12px;
+    }
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .k{color:rgba(255,255,255,.92);font-weight:900}
+  </style>
 </head>
-
 <body>
 
-<header>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div style="opacity:.9;font-weight:900">SIMELED</div>
+        <div style="opacity:.8">S.I.M.E. Electrónica S.A.</div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn" href="./index.html">← Volver al sitio</a>
+        <a class="btn" href="mailto:info@simeled.com">Email</a>
+      </div>
+    </div>
 
-<h1>Carteles LED para colectivos y buses</h1>
+    <h1>LedControl — Área de clientes</h1>
+    <p>
+      Esta sección es para clientes que utilizan cartelería SIMELED.
+      Desde acá podés acceder a instalación, documentación y enlaces oficiales.
+    </p>
 
-<p>
-Ramaleros, carteles superiores y cartelería LED multicolor para transporte público.
-Desarrollo propio, integración llave en mano y soporte técnico especializado.
-</p>
+    <div class="card">
+      <h2 style="margin:0 0 10px">Descarga / instalación</h2>
+      <p>
+        Link oficial que ya enviás a tus clientes:
+      </p>
 
-<div>
-<a class="btn btn-primary" href="https://wa.me/541161776651" target="_blank">Consultar por WhatsApp</a>
-<a class="btn btn-secondary" href="mailto:info@simeled.com">Enviar email</a>
-</div>
+      <div class="note">
+        <span class="k">Instalación:</span>
+        <a href="https://www.simeled.com/ledcontrol/help/Instalacion.html" target="_blank" rel="noopener">
+          https://www.simeled.com/ledcontrol/help/Instalacion.html
+        </a>
+      </div>
 
-</header>
+      <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btnPrimary" href="https://www.simeled.com/ledcontrol/help/Instalacion.html" target="_blank" rel="noopener">Abrir Instalación</a>
+        <a class="btn" href="https://simeled.com/ledcontrol-main/" target="_blank" rel="noopener">Abrir LedControl Main</a>
+      </div>
 
-<main>
+      <div class="grid">
+        <div class="note">
+          <span class="k">Tip PRO:</span> Acá también podemos poner “Notas de versión” y “Última actualización”.
+        </div>
+        <div class="note">
+          <span class="k">Soporte:</span> Si algo no abre, mandanos captura y versión de Windows.
+        </div>
+      </div>
+    </div>
 
-<section>
-<h2>Soluciones LED para transporte público</h2>
-<p>
-En SIMELED desarrollamos e integramos carteles LED para colectivos y buses,
-orientados a flotas urbanas, interurbanas y transporte público.
-Nuestra experiencia desde 1999 nos permite ofrecer soluciones robustas,
-confiables y adaptadas a las exigencias del sector.
-</p>
+    <div class="card">
+      <h2 style="margin:0 0 10px">Contacto de soporte</h2>
+      <p>Si necesitás asistencia técnica:</p>
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btnPrimary" href="https://wa.me/541161776651" target="_blank" rel="noopener">WhatsApp soporte</a>
+        <a class="btn" href="mailto:info@simeled.com">info@simeled.com</a>
+      </div>
+    </div>
 
-<div class="grid">
-<div class="card">
-<h3>Carteles ramaleros LED</h3>
-<ul>
-<li>Alta luminosidad día y noche</li>
-<li>Lectura clara a larga distancia</li>
-<li>Versiones monocromo y multicolor</li>
-<li>Configuración flexible por línea</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Carteles superiores de destino</h3>
-<ul>
-<li>Ómnibus urbanos</li>
-<li>Media y larga distancia</li>
-<li>Programación sencilla</li>
-<li>Integración con sistemas existentes</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Cartelería LED personalizada</h3>
-<ul>
-<li>Fabricación a medida</li>
-<li>Adaptación a modelo de colectivo</li>
-<li>Diseño según requerimientos de flota</li>
-<li>Soporte técnico permanente</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section>
-<h2>Especificaciones técnicas</h2>
-<div class="grid">
-<div class="card">
-<h3>Hardware</h3>
-<ul>
-<li>Gabinetes de aluminio reforzado</li>
-<li>Protección contra vibraciones</li>
-<li>Componentes electrónicos industriales</li>
-<li>Larga vida útil</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Software propio</h3>
-<ul>
-<li>Gestión centralizada</li>
-<li>Actualizaciones remotas</li>
-<li>Configuración por empresa y línea</li>
-<li>Control total del contenido</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Soporte</h3>
-<ul>
-<li>Asesoramiento técnico</li>
-<li>Instalación y puesta en marcha</li>
-<li>Mantenimiento preventivo</li>
-<li>Atención directa con especialistas</li>
-</ul>
-</div>
-</div>
-</section>
-
-<section>
-<h2>Software LedControl</h2>
-<p>
-Nuestros carteles LED funcionan con LedControl,
-el sistema de gestión desarrollado para garantizar
-actualizaciones confiables y control total del contenido.
-</p>
-
-<div class="cta">
-<h3>Acceso a LedControl</h3>
-<p class="small">Descargas y actualizaciones oficiales.</p>
-<a class="btn btn-primary" href="https://simeled.com/ledcontrol-main/" target="_blank">
-Ir a LedControl
-</a>
-</div>
-</section>
-
-<section>
-<h2>Trayectoria</h2>
-<p>
-S.I.M.E. Electrónica S.A. es una empresa argentina con trayectoria desde 1999.
-Especializada en soluciones electrónicas para transporte,
-ha evolucionado hacia el desarrollo de cartelería LED profesional
-con fabricación y soporte técnico propio.
-</p>
-</section>
-
-<section>
-<div class="cta">
-<h2>Consultanos para evaluar tu proyecto</h2>
-<p>
-Analizamos tu flota y te asesoramos sobre la mejor solución técnica.
-</p>
-<a class="btn btn-primary" href="https://wa.me/541161776651" target="_blank">
-Contactar ahora
-</a>
-</div>
-</section>
-
-</main>
-
-<footer>
-© 2026 SIMELED · S.I.M.E. Electrónica S.A. · Demo técnica
-</footer>
+    <div style="margin-top:18px;color:var(--muted);font-size:13px">
+      © SIMELED · Área de clientes (demo)
+    </div>
+  </div>
 
 </body>
 </html>
